@@ -1,0 +1,150 @@
+:root {
+  --text-color: #eceee5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.newsletter input {
+  padding: 17px 36px;
+  font-size: 1.0rem;
+  border: none;
+  outline: none;
+  border-radius: 32px 0 0 32px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(30, 79, 45, 0.18);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.newsletter input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(56, 161, 105, 0.25);
+}
+
+.newsletter input::placeholder {
+  color: #eceee5;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.newsletter button {
+  padding: 16px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  background: linear-gradient(90deg, #38a169 60%, #2b6d42 100%);
+  color: #fff;
+  border-radius: 0 32px 32px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(56, 161, 105, 0.18);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  min-width: 180px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.newsletter button:hover,
+.newsletter button:focus {
+  background: linear-gradient(90deg, #48bb78 60%, #38a169 100%);
+  transform: scale(1.01);
+  box-shadow: 0 6px 24px rgba(56, 161, 105, 0.28);
+}
+
+.newsletter button::after {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Responsividade para o botão e input do formulário */
+@media (max-width: 600px) {
+  .newsletter {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    border-radius: 32px !important;
+    width: 80%;
+    min-width: unset;
+    font-size: 1rem;
+    padding: 14px 18px;
+  }
+
+  .newsletter button {
+    margin-top: 8px;
+    font-size: 1.05rem;
+  }
+
+  .newsletter button::after {
+    right: 12px;
+    font-size: 1em;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Degradês modernos */
+.gradient1 {
+  background: linear-gradient(135deg, #173d23, #1e4f2d, #2b6d42);
+}
+
+.gradient2 {
+  background: linear-gradient(135deg, #1e4f2d, #2a6f41, #38a169);
+}
+
+.gradient3 {
+  background: linear-gradient(135deg, #2a6f41, #38a169, #48bb78);
+}
+
+.gradient4 {
+  background: linear-gradient(135deg, #173d23, #1e4f2d, #38a169);
+}
+
+/* Remove a marca d'água do FullPage.js */
+.fp-watermark {
+  display: none !important;
+}
